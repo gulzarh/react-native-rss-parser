@@ -80,6 +80,8 @@ const getItemLinks = (node) => {
   }));
 };
 
+const getItemThumbnail = (node) => utils.getElementTextContent(node, 'thumbnail');
+
 const getItemDescription = (node) =>
   utils.getElementTextContent(node, 'description');
 
@@ -165,6 +167,7 @@ const mapItems = (document) => {
     enclosures: getItemEnclosures(item),
     itunes: itunesParser.parseItem(item),
     image: getChannelImage(item),
+    thumbnail: getItemThumbnail(item)
   }));
 };
 
