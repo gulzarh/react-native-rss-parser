@@ -164,6 +164,7 @@ const mapItems = (document) => {
     published: getItemPublished(item),
     enclosures: getItemEnclosures(item),
     itunes: itunesParser.parseItem(item),
+    image: getChannelImage(item),
   }));
 };
 
